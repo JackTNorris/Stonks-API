@@ -1,6 +1,7 @@
 const puppeteer = require('puppeteer');
 const url = "https://finance.yahoo.com/quote/t/key-statistics?ltr=1";
-
+const jsdom = require("jsdom");
+const { JSDOM } = jsdom;
 export const getEbitda = async (ticker, res) => {
     puppeteer.launch({headless: true}).then(async browser => {
         let page = await browser.newPage();
