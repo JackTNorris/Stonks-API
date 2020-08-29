@@ -17,7 +17,7 @@ getEbitda = async (ticker, res) => {
           const dom = new JSDOM(html);
           let tempArr = dom.window.document.getElementsByClassName('Fw(500) Ta(end) Pstart(10px) Miw(60px)');
           const ebitda = tempArr[38].textContent;
-          res.send(ebitda);
+          res.send(html);
           //console.log(tempArr[38].textContent);
       }).catch(err => res.send(err))
   }).catch(err => res.send(err));
