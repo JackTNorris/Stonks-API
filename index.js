@@ -19,8 +19,8 @@ getEbitda = async (ticker, res) => {
           const ebitda = tempArr[38].textContent;
           res.send("SUCCESS");
           //console.log(tempArr[38].textContent);
-      }).catch(err => res.send("ERROR!"))
-  }).catch(err => res.send("ERROR!"));
+      }).catch(err => res.send("ERROR AT POINT 1"))
+  }).catch(err => res.send("ERROR AT POINT 2"));
 }
 
 
