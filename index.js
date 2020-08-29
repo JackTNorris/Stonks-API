@@ -2,6 +2,8 @@ const express = require('express')
 const path = require('path')
 const PORT = process.env.PORT || 5000
 const puppeteer = require('puppeteer');
+const getEbitda = require('./src/api/ebitda');
+/*
 const jsdom = require("jsdom");
 const { JSDOM } = jsdom;
 
@@ -23,7 +25,7 @@ getEbitda = async (ticker, res) => {
       }).catch(err => res.send("ERROR AT POINT 1"))
   }).catch(err => res.send("ERROR AT POINT 2"));
 }
-
+*/
 
 express()
   .use(express.static(path.join(__dirname, 'public')))
