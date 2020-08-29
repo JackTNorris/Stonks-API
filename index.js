@@ -6,7 +6,7 @@ const jsdom = require("jsdom");
 const { JSDOM } = jsdom;
 
 getEbitda = async (ticker, res) => {
-  puppeteer.launch(puppeteer.launch({args: ['--no-sandbox', '--disable-setuid-sandbox']}))
+  puppeteer.launch({args: ['--no-sandbox', '--disable-setuid-sandbox']})
     .then(async browser => {
       let page = await browser.newPage();
       page.setViewport({ width: 1366, height: 768 });
