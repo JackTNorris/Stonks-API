@@ -15,6 +15,6 @@ export const getEbitda = async (ticker, res) => {
             const ebitda = tempArr[38].textContent;
             res.send(ebitda);
             //console.log(tempArr[38].textContent);
-        }).catch(err => console.log(err))
-    }).catch(err => console.log(err));
+        }).catch(err => res.send(err))
+    }).catch(err => res.send(err));
 }
