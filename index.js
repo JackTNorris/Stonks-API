@@ -1,6 +1,9 @@
 const express = require('express')
 const path = require('path')
 const PORT = process.env.PORT || 5000
+const puppeteer = require('puppeteer');
+const jsdom = require("jsdom");
+const { JSDOM } = jsdom;
 
 getEbitda = async (ticker, res) => {
   puppeteer.launch({headless: true}).then(async browser => {
