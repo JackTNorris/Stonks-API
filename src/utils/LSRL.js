@@ -12,7 +12,7 @@ const computeLSRL = (Xs, Ys) => {
     const sumXSqrd = sumSet(xSqrd);
     const sumXY = sumSet(xY);
     const m = slope(Xs.length, sumX, sumY, sumXSqrd, sumXY);
-    const b = yIntercept(x.length, sumX, sumY, m);
+    const b = yIntercept(Xs.length, sumX, sumY, m);
     console.log(`${m}x + ${b}`);
 }
 
@@ -34,3 +34,7 @@ const slope = (numPoints, sumX, sumY, sumXSqrd, sumXY) => {
 const yIntercept = (numPoints, sumX, sumY, m) => {
     return (sumY - m * sumX)/numPoints
 }
+
+module.exports = computeLSRL;
+
+
